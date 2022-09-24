@@ -1,21 +1,31 @@
-name: CI
+name: Test and build
 on: push
 jobs:
-  depencencies:
+  test:
+    name: Test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Install modules
-      run: yarn
-  tests:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run tests
-      run: yarn test:ci
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.13.1
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm i yarn -g && yarn install
+      - name: Run test command
+        run: yarn test:ci
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Build aplication
-      run: yarn build
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.13.1
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm i yarn -g && yarn install
+      - name: Run test command
+        run: yarn build
