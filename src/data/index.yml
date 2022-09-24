@@ -1,0 +1,44 @@
+meta:
+  title: Elon Musk
+  description: Elon Musk | Business magnate and investor
+  author: Elon Musk
+  tags: business magnate, investor, Elon Musk
+theme: default-dark
+name: Elon Musk
+occupancy: Business magnate and investor
+about: Elon Reeve Musk FRS is a business magnate and investor. He is the founder, CEO, and Chief Engineer at SpaceX; angel investor, CEO, and product architect of Tesla, Inc.; founder of The Boring Company; and co-founder of Neuralink and OpenAI.
+avatar: /assets/avatar.jpg
+links:
+  - id: 1
+    title: "Social:"
+    items:
+      - id: 1
+        title: Twitter
+        url: https://twitter.com/elonmusk
+        color: "#1DA1F2"
+      - id: 2
+        title: Instagram
+        url: https://www.instagram.com/elonmusk
+        color: "#F56040"
+      - id: 3
+        title: My Spotify Playlist
+        url: https://open.spotify.com/playlist/73tqfhWVBUq4Rup1mdEXel?si=221335613cdb4a52
+        color: "#1DB954"
+cards:
+  - id: 1
+    title: "My companies:"
+    items:
+      - id: 1
+        title: SpaceX
+        url: https://www.spacex.com/
+        banner: /assets/spacex.jpg
+        description: Space Exploration Technologies Corp. is an American spacecraft manufacturer, space launch provider, and a satellite communications corporation headquartered in Hawthorne, California. It was founded in 2002 by Elon Musk, with the goal of reducing space transportation costs to enable the colonization of Mars.
+      - id: 2
+        title: Starlink
+        url: https://www.starlink.com/
+        banner: /assets/starlink.jpg
+        description: Starlink is a satellite internet constellation operated by SpaceX, providing satellite Internet access coverage to 40 countries. It also aims for global mobile phone service after 2023. SpaceX started launching Starlink satellites in 2019.
+      - id: 3
+        title: Neuralink
+        url: https://neuralink.com/
+        description: Neuralink Corporation is a neurotechnology company that develops implantable brain–machine interfaces.
