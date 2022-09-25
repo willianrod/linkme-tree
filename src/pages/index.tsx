@@ -44,6 +44,26 @@ const Home: NextPage<IData> = ({
 };
 
 export async function getStaticProps() {
+  const gistUrl = process.env.GIST_URL as string;
+
+  if (gistUrl) {
+    const gistData = await fetch(gistUrl)
+      .then((res) => res.blob())
+      .then((blob) => blob.text())
+      .then((yamlAsString) => yaml.load(yamlAsString) as IData)
+      .catch((err) => {
+        console.log("yaml err:", err);
+      });
+
+    if (gistData) {
+      return {
+        props: {
+          ...gistData,
+        },
+      };
+    }
+  }
+
   const data = yaml.load(
     fs.readFileSync("src/data/index.yml", "utf8")
   ) as IData;
