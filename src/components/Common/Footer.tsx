@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <FooterContainer>
       <a
-        href="https://github.com/willianrod"
+        href="https://github.com/willianrod/linkme-tree"
         target="_blank"
         rel="noopener noreferrer"
       >

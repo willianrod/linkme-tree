@@ -1,34 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <img src=".media/logo.svg" width="200px">
+  <br/>
+  <h4 width="400px">An open-source and self-hosted, privacy focused alternative to linktree, easily configurableand easy to deploy.</h4>
+</div>
 
-## Getting Started
+---
 
-First, run the development server:
+# Description
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+If you're looking for a personal website, links to your social media, links to personal projects and a place to put all your links, this is for you, all of this with no cookies and no trackers. Just what matters!!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Configuration
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Basically there is two ways you can customize LinkMe Tree for your needs. One of them is to updating the yaml file inside `src/data`, and the second one is to have Gist file with all your information to be deployed.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Updating `src/data/index.yml`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+If you want to have everything in one place, this option is for you. You just need to fork this repository, update the file with all your information and deploy it anywhere you want.
 
-## Learn More
+## Using a gist file
 
-To learn more about Next.js, take a look at the following resources:
+If you want to have all information easily reachable and not having to do lots of commits to update your links, this option is for you. Have in mind that in order to your update take effect, you'll have to manually trigger re-deploy on Vercel.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+First you will need to create a new gist file [here](https://gist.github.com/) and give it the name you want with `.yml` extension. Then, copy the `src/data/index.yml` contents to your gist and start customizing it with your information. Once you're done, you will need to get the raw gist file URL like this one https://gist.githubusercontent.com/willianrod/f9af9032d4c5d0087d92dea26a755af8/raw/4949aaac5d0a367e3076dc6dd56b3c2f7b4c11bc/linkme-tree.yml.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+With the gist url, you just need to add a enviroment variable named `GIST_URL` with your gist url and your're ready to deploy 🎉.
 
-## Deploy on Vercel
+# Deploy your own
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Now that you're ready, you can go ahead and deploy on your own Vercel account.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwillianrod%2Flinkme-tree&env=GIST_URL&envDescription=This%20is%20opitional%20if%20you%20are%20using%20the%20yaml%20file%20inside%20src%2Fdata%2F%20but%20is%20required%20if%20you're%20loading%20a%20yaml%20from%20gist&project-name=linkme-tree&repo-name=linkme-tree)
