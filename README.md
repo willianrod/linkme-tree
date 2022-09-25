@@ -22,7 +22,7 @@ If you want to have everything in one place, this option is for you. You just ne
 
 If you want to have all information easily reachable and not having to do lots of commits to update your links, this option is for you. Have in mind that in order to your update take effect, you'll have to manually trigger re-deploy on Vercel.
 
-First you will need to create a new gist file [here](https://gist.github.com/) and give it the name you want with `.yml` extension. Then, copy the `src/data/index.yml` contents to your gist and start customizing it with your information. Once you're done, you will need to get the raw gist file URL like this one https://gist.githubusercontent.com/willianrod/f9af9032d4c5d0087d92dea26a755af8/raw/4949aaac5d0a367e3076dc6dd56b3c2f7b4c11bc/linkme-tree.yml.
+First you will need to create a new gist file [here](https://gist.github.com/) and give it the name you want with `.yml` extension. Then, copy the `src/data/index.yml` contents to your gist and start customizing it with your information. Once you're done, you will need to get the raw gist file URL like this one https://gist.githubusercontent.com/willianrod/f9af9032d4c5d0087d92dea26a755af8/raw/linkme-tree.yml.
 
 With the gist url, you just need to add a enviroment variable named `GIST_URL` with your gist url and your're ready to deploy 🎉.
 
